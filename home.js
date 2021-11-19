@@ -26,8 +26,6 @@ const greetUser = userName => `Welcome back ${userName}`
 console.log(greetUser('Samanta'))
 
 
-
-
 //////////////////PROBLEM 2/////////////////////////////////////////////////////////////////////////////
 /* 
     Below is an array of zip codes that are in
@@ -133,7 +131,7 @@ const deals = [
 //CODE HERE
 
 let deals2 = deals.title.replace(
-    
+
 )
 
 

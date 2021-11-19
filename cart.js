@@ -35,7 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((ac,cur) => ac + cur['price'], 0)
+console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,7 +55,14 @@ const cart = [
 */
 
 //CODE HERE
+// const calcFinalPrice = (cartTotal, couponValue, tax) => {
+//     let price = (cartTotal * (1 + tax)) - couponValue
+//     return price
+// }
 
+const calcFinalPrice = (cartTotal, couponValue, tax) => (cartTotal * (1 + tax)) - couponValue
+let price1 = calcFinalPrice(100, 20, 0.15)
+console.log(price1)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,6 +87,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    price - Number, because the costumers need's to see how mach the product cost
+    name - String, name of product
+    items - Number, how many items does the costumer need
+    raiting - number,when buying a product, rating is very important
 
 */
 
@@ -88,3 +100,10 @@ const cart = [
 */
 
 //CODE HERE
+const costumerObj = {
+    price = 10,
+    name = 'IPhone 13',
+    items = 3,
+    raiting = 5
+    
+}

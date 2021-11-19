@@ -37,7 +37,7 @@ const pizza = {
     category: 'appetizer',
     popularity: 70,
     rating: 77,
-    tags: ['cheese1', 'cheese2', 'tomato']
+    tags: ['cheese1', 'bacon', 'tomato']
 }
 
 
@@ -71,7 +71,8 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
-
+const {price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -81,7 +82,8 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
-
+const {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -96,8 +98,51 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
+// let foodArr = ['Cheese Pizza','Pepperoni Pizza','Supreme Pizza','Buffalo Chicken Pizza','Hawaiian Chicken Pizza']
 
+const foodArr = [
+    {
+        name:'Supreme Pizza',
+        price: 22,
+        category: 'appetizer',
+        popularity: 80,
+        rating: 50,
+        tags: 'Supreme'
+    },
+    {
+        name:'Buffalo Chicken Pizza',
+        price: 15,
+        category: 'entree',
+        popularity: 70,
+        rating: 77,
+        tags: 'Tomato'
+    },
+    {
+        name:'Pepperoni Pizza',
+        price: 25,
+        category: 'entree',
+        popularity: 55,
+        rating: 67,
+        tags: 'Pipperoni'
+    },
+    {
+        name:'Hawaiian Chicken Pizza',
+        price: 30,
+        category: 'appetizer',
+        popularity: 90,
+        rating: 90,
+        tags: 'Chicken'
+    },
+    {
+        name:'Cheese Pizza',
+        price: 40,
+        category: 'appetizer',
+        popularity: 90,
+        rating: 90,
+        tags: 'Cheese'
+    }
 
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -111,10 +156,11 @@ console.log(pizza.tags[1])
     your food objects has.
 */
 
+
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+const filteredFood = foodArr.filter((food) => food['tags'] === 'Cheese')
+console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -157,7 +203,9 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
-
+const filterByProperty = (property, number, type) => {
+    let fiteredArr = []
+}
 
 /*
     Invoke the `filterByProperty` function passing

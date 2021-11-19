@@ -8,7 +8,7 @@
 */
 
 
-//////////////////PROBLEM 1//////////////////////////////////////////////////////////////////////////
+////////////////// PROBLEM 1 //////////////////////////////////////////////////////////////////////////
 /* 
     Write an *arrow* function called `greetUser`
     It should have one parameter, `username`
@@ -26,7 +26,7 @@ const greetUser = userName => `Welcome back ${userName}`
 console.log(greetUser('Samanta'))
 
 
-//////////////////PROBLEM 2/////////////////////////////////////////////////////////////////////////////
+////////////////// PROBLEM 2 /////////////////////////////////////////////////////////////////////////////
 /* 
     Below is an array of zip codes that are in
     the restaurant's delivery zone. 
@@ -95,7 +95,7 @@ console.log(addr2)
 
 
 
-//////////////////PROBLEM 3////////////////////////////////////////////////////////////////////////////////////
+////////////////// PROBLEM 3 ////////////////////////////////////////////////////////////////////////////////////
 /* 
     Below is an array of objects that have some
     information about a couple of deals that are
@@ -129,11 +129,12 @@ const deals = [
 */
 
 //CODE HERE
-
-let deals2 = deals.title.replace(
-
-)
-
+// deals[0].title = "10% Off!"
+// console.log(deals)
+let newTitle = deals[0].title.replace('15% Off!', '10% Off!')
+console.log(newTitle)
+deals[0].title = newTitle
+console.log(deals)
 
 
 /*
@@ -150,3 +151,12 @@ let deals2 = deals.title.replace(
 */
 
 //CODE HERE
+let newDesc = deals[1].desc.trim()
+console.log(newDesc)
+deals[1].desc = newDesc
+console.log(deals)
+
+let newDesc1 = deals[1].desc.replace('March', 'April')
+console.log(newDesc1)
+deals[1].desc = newDesc1
+console.log(deals)

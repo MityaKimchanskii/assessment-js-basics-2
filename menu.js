@@ -8,7 +8,7 @@
 */
 
 
-//////////////////PROBLEM 1////////////////////
+//////////////////PROBLEM 1///////////////////////////////////////////////////////////////////////////////
 /*  
     Create an object called `pizza` that has 6
     properties: 
@@ -41,7 +41,7 @@ const pizza = {
 }
 
 
-//////////////////PROBLEM 2////////////////////
+//////////////////PROBLEM 2/////////////////////////////////////////////////////////////////////////////////
 /* 
     Let's print a few values from our pizza object.
 
@@ -85,7 +85,7 @@ console.log(price)
 const {category} = pizza
 console.log(category)
 
-//////////////////PROBLEM 3////////////////////
+//////////////////PROBLEM 3/////////////////////////////////////////////////////////////////////////////////////
 /* 
     Create an array with about 5 objects in it.
     The objects should mimic the `pizza` object.
@@ -144,7 +144,7 @@ const foodArr = [
 
 ]
 
-//////////////////PROBLEM 4////////////////////
+//////////////////PROBLEM 4//////////////////////////////////////////////////////////////////////////////////
 /* 
     Let's filter the food objects according
     to their tags.
@@ -163,7 +163,7 @@ const filteredFood = foodArr.filter((food) => food['tags'] === 'Cheese')
 console.log(filteredFood)
 
 
-//////////////////PROBLEM 5////////////////////
+//////////////////PROBLEM 5///////////////////////////////////////////////////////////////////////////////////
 /* 
     Now let's write a function that's a little
     more flexible than just filtering for one
@@ -204,7 +204,14 @@ console.log(filteredFood)
 
 //CODE HERE
 const filterByProperty = (property, number, type) => {
-    let fiteredArr = []
+    const fiteredArr = foodArr.filter((element) => {
+        if(type === 'above'){
+            return element[property] > number
+        } else if(type ==='below'){
+            return element[element] < number
+        }
+    })
+    return filterByProperty
 }
 
 /*
@@ -215,3 +222,5 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
+filterByProperty('price', 30, 'below')
+console.log(foodArr)

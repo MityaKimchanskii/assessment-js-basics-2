@@ -101,9 +101,9 @@ console.log(price1)
 
 //CODE HERE
 const costumerObj = {
-    price = 10,
-    name = 'IPhone 13',
-    items = 3,
-    raiting = 5
+    price12: 10,
+    name: 'IPhone 13',
+    items:  3,
+    raiting: 5
     
 }

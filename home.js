@@ -23,7 +23,7 @@
 
 //CODE HERE
 const greetUser = userName => `Welcome back ${userName}`
-console.log(greetUser('Samanta'))
+// console.log(greetUser('Samanta'))
 
 
 ////////////////// PROBLEM 2 /////////////////////////////////////////////////////////////////////////////
@@ -59,7 +59,7 @@ const canWeDeliver = zipCode => {
     } 
 }
 const addr = canWeDeliver(88888)
-console.log(addr)
+// console.log(addr)
 
 /* 
     Problem 2 Continued
@@ -79,20 +79,27 @@ console.log(addr)
 */
 
 // CODE HERE
-const checkZip = zipCode => deliveryAreaZipCodes.includes(zipCode) 
+// const checkZip = zipCode => deliveryAreaZipCodes.includes(zipCode) 
 
-const canWeDeliverTwo = (zipCode, bool) => {
-    if (bool){ 
-        return `You're in our delivery zone!`
+// const canWeDeliverTwo = (zipCode, bool) => {
+//     if (bool){ 
+//         return `You're in our delivery zone!`
+//     } else {
+//         return `Sorry, we can't deliver to that address`
+//     }
+// }
+
+
+const canWeDeliverTwo = zip => {
+    if (deliveryAreaZipCodes.includes(zip)){
+      return `You're in our delivery zone!`
     } else {
-        return `Sorry, we can't deliver to that address`
+      return `Sorry, we can't deliver to that address`
     }
-}
-
-const addr2 = canWeDeliverTwo(88888, checkZip)
+  }
+  
+const addr2 = canWeDeliverTwo(77777)
 console.log(addr2)
-
-
 
 
 ////////////////// PROBLEM 3 ////////////////////////////////////////////////////////////////////////////////////
@@ -132,9 +139,9 @@ const deals = [
 // deals[0].title = "10% Off!"
 // console.log(deals)
 let newTitle = deals[0].title.replace('15% Off!', '10% Off!')
-console.log(newTitle)
+// console.log(newTitle)
 deals[0].title = newTitle
-console.log(deals)
+// console.log(deals)
 
 
 /*
@@ -152,11 +159,11 @@ console.log(deals)
 
 //CODE HERE
 let newDesc = deals[1].desc.trim()
-console.log(newDesc)
+// console.log(newDesc)
 deals[1].desc = newDesc
-console.log(deals)
+// console.log(deals)
 
 let newDesc1 = deals[1].desc.replace('March', 'April')
-console.log(newDesc1)
+// console.log(newDesc1)
 deals[1].desc = newDesc1
-console.log(deals)
+// console.log(deals)

@@ -107,7 +107,7 @@ const foodArr = [
         category: 'appetizer',
         popularity: 80,
         rating: 50,
-        tags: 'Supreme'
+        tags: ['Supreme', 'Tomato']
     },
     {
         name:'Buffalo Chicken Pizza',
@@ -115,7 +115,7 @@ const foodArr = [
         category: 'entree',
         popularity: 70,
         rating: 77,
-        tags: 'Tomato'
+        tags: ['Tomato', 'Tomato']
     },
     {
         name:'Pepperoni Pizza',
@@ -123,7 +123,7 @@ const foodArr = [
         category: 'entree',
         popularity: 55,
         rating: 67,
-        tags: 'Pipperoni'
+        tags: ['Pipperoni', 'Tomato']
     },
     {
         name:'Hawaiian Chicken Pizza',
@@ -131,7 +131,7 @@ const foodArr = [
         category: 'appetizer',
         popularity: 90,
         rating: 90,
-        tags: 'Chicken'
+        tags: ['Chicken', 'Tomato']
     },
     {
         name:'Cheese Pizza',
@@ -139,7 +139,7 @@ const foodArr = [
         category: 'appetizer',
         popularity: 90,
         rating: 90,
-        tags: 'Cheese'
+        tags: ['Cheese', 'Tomato']
     }
 
 ]
@@ -159,7 +159,7 @@ const foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter((food) => food['tags'] === 'Cheese')
+const filteredFood = foodArr.filter((food) => food['tags'].includes('Cheese'))
 console.log(filteredFood)
 
 
@@ -223,4 +223,4 @@ const filterByProperty = (property, number, type) => {
 
 //CODE HERE
 filterByProperty('price', 30, 'below')
-console.log(foodArr)
+// console.log(foodArr)
